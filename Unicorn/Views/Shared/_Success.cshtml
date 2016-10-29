@@ -1,0 +1,26 @@
+﻿@using Unicorn.Models
+@model ScreenViewModel
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="successModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center">
+                <img src="~/Content/Images/trophy.png" style="height: 200px" />
+                <h1>Gratulacje!!!</h1>
+                @if (Model.IsLast)
+                {
+                    <h3>Pokonałaś wszystkie zagadki. Brawo :)</h3>
+                    <a href="@(Url.Action(Model.Next))" type="button" class="btn btn-primary">Odbierz nagrodę</a>
+                }
+                else
+                {
+                    <h3>Udało się, zobaczymy jak poradzisz sobie <br />z następną :P</h3>
+                    <a href="@(Url.Action(Model.Next))" type="button" class="btn btn-primary">Następna zagadka</a>
+                }
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

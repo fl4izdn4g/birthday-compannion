@@ -1,0 +1,55 @@
+﻿
+@using Unicorn.Models
+@model ScreenViewModel
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/base.js"></script>  
+    @if (Model.IsSuccess)
+    {
+        <script>
+            jQuery('#successModal').modal();
+        </script>
+    }
+
+}
+
+
+<div class="row tv-container">
+    @if (!Model.IsSuccess)
+    {
+        <div class="ballon-container">
+            <div class="cipher-baloon">@Model.Mode</div>
+        </div>
+        
+        <img src="~/Content/Images/rarity.png" class="rarity" />
+    }
+    <img src="~/Content/Images/flat_screen.png" style="width: 500px" />
+    <div class="tv-screen">
+        <img src="~/Content/Images/@(Model.ImageName).png" />
+    </div>
+</div>
+<div class="row tv-table">
+            @using (Html.BeginForm())
+            {
+                <div class="cipher-data">
+                    @Html.Partial("_" + Model.PasswordPartialName)
+                </div>
+
+                
+                string classes = "form-control cipher-textbox";
+                if(Model.IsError)
+                {
+                    classes += " form-has-error";
+                }
+                
+                @Html.TextBoxFor(m => m.GivenPassword, new { @class = classes })
+                <button type="submit" class="btn btn-success cipher-check">Sprawdź</button>
+            }
+        
+</div>
+<div class="row tv-table-stand"></div>
+
+ @if(Model.IsSuccess)
+ {
+     @Html.Partial("_Success", Model);
+}

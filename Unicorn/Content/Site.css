@@ -1,0 +1,138 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.tv-container {
+    min-height: 200px;  
+    text-align: center; 
+    position: relative;
+}
+
+.tv-screen {
+    position: absolute;
+    top: 12px;
+    left: 267px;
+    background-color: #666;
+    width: 476px;
+    height: 275px;
+}
+
+.tv-table {
+     position: relative;
+     background-color: white; 
+     min-height: 180px; 
+     padding: 10px; 
+     text-align: center;
+     z-index: 1000;
+}
+
+.tv-table-stand {
+    background-color: #ddd; 
+    margin:0 auto; 
+    width: 960px; 
+    min-height: 20px;
+}
+
+.cipher-baloon {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 22px;
+    left: 55px;
+}
+
+.rarity {
+    bottom: -180px; 
+    left: 0px;
+    position: absolute;
+    height: 150px;
+    z-index: 1;
+}
+
+.cipher-text {
+    text-align: center;
+}
+
+.cipher-textbox {
+    font-size: 24px;
+    height: 40px;
+    max-width: 400px !important;
+    text-align: center;
+    display: inline-block;
+}
+
+.cipher-container {
+    text-align: center;
+}
+
+.cipher-data {
+    margin-bottom: 40px;
+}
+
+.form-has-error {
+    background-color: #ff2800;
+    border: 1px solid #830000;
+    color: #fff;
+}
+
+.cipher-check {
+    height: 40px;
+}
+
+.ballon-container {
+    background: url(Images/balloon.png) 0 0 no-repeat;
+    width: 204px;
+    height: 122px;
+    position: absolute;
+    bottom: 140px;
+    opacity: 0;
+}
+
+.FRzgc_images img {
+    height: 80px;
+}
+
+.jorJG_images img {
+    height: 70px;
+}
+.mJwXx_images img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+.AnrOY_images img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.info-container {
+    width: 640px; 
+    height: 480px; 
+    background: #fff; 
+    margin: 20px auto; 
+    border-radius: 10px;
+    padding: 20px;
+}
